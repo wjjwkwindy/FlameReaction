@@ -1,0 +1,24 @@
+<% if(index){ %>
+    <!-- index logic -->
+    <article class="article-items">
+        <section class="article-preview">
+            <a class="article-link" href="<%- url_for(post.path)%>"></a>
+            <div class="article-title">
+                <h2><%= post.title %></h2>
+                <span><%- date(post.date.format('YYYY-MM-DD')) %></span>
+            </div>
+            <div class="article-excerpt"><%- post.excerpt %></div>
+        </section>
+        <footer></footer>
+    </article>
+<% }else{ %>
+    <!-- post or page logic -->
+    <%- partial('header.ejs') %>
+    <main class="post-container">
+        <div class="post-inner">
+            <header class="post-title"><%= post.title %></header>
+            <%- post.content %>
+            <%- partial('footer.ejs',{index: true, post: post}) %>
+        </div>
+    </main>
+<% } %>
