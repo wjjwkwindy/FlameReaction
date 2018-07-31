@@ -7,7 +7,7 @@
                 <h2><%= post.title %></h2>
                 <span><%- date(post.date.format('YYYY-MM-DD')) %></span>
             </div>
-            <div class="article-excerpt"><%- post.excerpt %></div>
+            <div class="article-excerpt"><%- post.subtitle %></div>
         </section>
         <footer></footer>
     </article>
@@ -16,9 +16,50 @@
     <%- partial('header.ejs') %>
     <main class="post-container">
         <div class="post-inner">
-            <header class="post-title"><%= post.title %></header>
+            <!-- post title -->
+            <header class="post-title">
+                <% if(post.title=='about'){ %>
+                <% }else{ %>
+                    <h1 class="title"><%= post.title %></h1>
+                    <h2 class="subtitle"><%- post.subtitle %></h2>
+                    <span class="meta-item">Author: <%- page.author || config.author %></span>
+                    <span class="meta-item">Date: <%= page.date.format(config.date_format) %></span>
+                    <span class="meta-item">Tags:
+                    <% page.tags.forEach(function(tag){ %>
+                        <a title="<%= tag.name %>"><%= tag.name %></a>
+                    <% }) %>
+                    </span>
+                <% } %>
+            </header>
+            <!-- post content -->
             <%- post.content %>
-            <%- partial('footer.ejs',{index: true, post: post}) %>
+            <!-- author info -->
+            <% if(post.title=='about'){ %>
+            <% }else{ %>
+                <div class="author">
+                    <a class="author_avatar" href="<%= config.url %>" style="background-image:url(<%= config.images.avatar %>)"></a>
+                    <div>
+                        <a class="author_name" href="<%= config.url %>"><%= config.author %></a>
+                        <p class="author_description"><%= config.description %></p>
+                    </div>
+                </div>
+            <% } %>
+            <!-- more post -->
+            <div></div>
+            <!-- disqus -->
+            <% if(config.disqus && post.disqus){ %>
+                <div id="disqus_thread"></div>
+            <% } %>
         </div>
+        <%- partial('footer.ejs',{index: true, post: post}) %>
+        <script>
+                (function() { // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://www-co2oc-com.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </main>
 <% } %>

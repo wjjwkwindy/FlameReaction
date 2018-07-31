@@ -3,12 +3,13 @@ var navList = document.getElementById('g-navlist');
 
 hljs.initHighlightingOnLoad();
 
-toggleButton.addEventListener('click', function () {
-    navList.style.display = (navList.style.display == 'none') ? 'block' : 'none';
-});
-
-window.addEventListener('click', function (event) {
-    if (event.target !== toggleButton) {
-        navList.style.display = 'none';
-    }
-});
+if (toggleButton && navList) {
+    toggleButton.addEventListener('click', function () {
+        navList.classList.toggle('nav-list-show');
+    });
+    window.addEventListener('click', function (event) {
+        if (event.target !== toggleButton) {
+            navList.classList.remove('nav-list-show');
+        }
+    });
+}
