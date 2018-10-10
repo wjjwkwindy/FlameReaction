@@ -9,10 +9,10 @@
             </div>
             <div class="article-excerpt"><%- post.subtitle %></div>
         </section>
-        <footer></footer>
     </article>
 <% }else{ %>
     <!-- post or page logic -->
+    <div class="wrapper">
     <%- partial('header.ejs') %>
     <main class="post-container">
         <div class="post-inner">
@@ -52,6 +52,7 @@
             <% } %>
         </div>
         <%- partial('footer.ejs',{index: true, post: post}) %>
+        </div>
         <script>
                 (function() { // DON'T EDIT BELOW THIS LINE
                     var d = document, s = d.createElement('script');

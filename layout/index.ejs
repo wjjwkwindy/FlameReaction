@@ -14,7 +14,8 @@
             <h1><%= config.title %></h1>
             <h2><%= config.subtitle %></h2>
         </div>
-    </div>
+</div>
+<div class="wrapper wrapper-index">
     <main class="main-list">
         <% page.posts.each(function (post,index) { %>
             <%- partial('_partial/article.ejs',{index: true, post: post}) %>
@@ -22,3 +23,4 @@
         <%- partial('_partial/paginator') %>
         <%- partial('_partial/footer.ejs') %>
     </main>
+</div>
