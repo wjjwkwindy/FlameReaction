@@ -184,11 +184,10 @@ ul {
     font-weight: lighter;
 }
 
-.banner-content h2 {
-    font-family: 'Libre Barcode 39 Text', cursive;
-    font-size: 3em;
-    color: rgba(255, 255, 255, 0.6);
-    margin: 1rem 0;
+.banner-content h2 img{
+    width: 226px;
+    margin-top: 20px;
+    opacity: 0.8;
 }
 
 /* article */
@@ -224,7 +223,6 @@ ul {
 }
 
 .article-items .article-preview .article-title h2 {
-    font-weight: bold;
     flex: 1;
 }
 
@@ -531,9 +529,10 @@ ul {
         letter-spacing: .1rem;
         word-spacing: .4rem;
     }
-    .banner .banner-content h2 {
-        font-size: 35px;
-        letter-spacing: .1rem;
+    .banner .banner-content h2 img{
+        width: 180px;
+        margin-top: 15px;
+        opacity: 0.8;
     }
     /* article */
     .main-list {
@@ -612,10 +611,10 @@ ul {
         margin: 10px 0;
         letter-spacing: .01rem;
     }
-    .banner .banner-content h2 {
-        font-size: 25px;
-        letter-spacing: .1rem;
-        margin: 0;
+    .banner .banner-content h2 img{
+        margin-top: 5px;
+        width: 130px;
+        opacity: 0.8;
     }
     .header-title {
         font-size: 15px;
