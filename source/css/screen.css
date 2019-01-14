@@ -24,7 +24,7 @@ h6,
 p,
 blockquote {
   margin: 0;
-  font-weight: normal;
+  font-weight: 400;
 }
 
 a {
@@ -268,10 +268,10 @@ ul {
 }
 
 .header-container {
-  max-width: 1080px;
+  max-width: 1120px;
   box-sizing: border-box;
   margin: 0 auto;
-  padding: 40px 0;
+  padding: 40px 20px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -319,12 +319,17 @@ ul {
 
 .post-inner {
   margin-bottom: 100px;
+  padding: 0 90px;
 }
 
 .post-title {
-  margin-bottom: 50px;
+  margin-bottom: 18px;
   color: #a9a9a9;
   text-align: center;
+}
+
+.post-image {
+  margin-bottom: 23px;
 }
 
 .post-image img {
@@ -356,15 +361,15 @@ ul {
 }
 
 .post-inner p {
-  margin: 0 90px 20px 90px;
+  margin: 0 0 20px 0;
   font-size: 16px;
   color: #666;
 }
 
 .post-inner blockquote {
-  margin: 0 90px 20px 90px;
-  padding: 5px 20px;
-  border-left: 4px solid rgba(102, 128, 153, 0.2);
+  margin: 0 0 20px 0;
+  padding: 1px 15px;
+  border-left: 2px solid #84b1ed;
 }
 
 .post-inner blockquote p {
@@ -373,33 +378,27 @@ ul {
 }
 
 .post-inner h1 {
-  margin: 0 90px 1.6rem 90px;
-  font-weight: 400;
+  margin: 2rem 0 1rem 0;
 }
 
 .post-inner h2 {
-  margin: 2rem 90px 0.6rem 90px;
-  font-weight: 400;
+  margin: 2rem 0 1rem 0;
 }
 
 .post-inner h3 {
-  margin: 3rem 90px 1rem 90px;
-  font-weight: 400;
+  margin: 2rem 0 1rem 0;
 }
 
 .post-inner h4 {
-  margin: 2rem 90px 0.6rem 90px;
-  font-weight: bold;
+  margin: 2rem 0 1rem 0;
 }
 
 .post-inner h5 {
-  margin: 2rem 90px 1rem 90px;
-  font-weight: 400;
+  margin: 2rem 0 1rem 0;
 }
 
 .post-inner h6 {
-  margin: 2rem 90px 0.6rem 90px;
-  font-weight: 400;
+  margin: 2rem 0 1rem 0;
 }
 
 .post-inner a {
@@ -425,7 +424,7 @@ ul {
 }
 
 .post-inner pre code {
-  margin: 0 90px;
+  margin: 0 0;
 }
 
 .author {
@@ -616,6 +615,10 @@ ul {
   .wrapper {
     width: auto;
   }
+
+  .wrapper-index {
+    margin: 20px auto 0;
+  }
   /* banner */
   .banner {
     height: 290px;
@@ -670,6 +673,10 @@ ul {
   .header-container-title {
     display: none;
   }
+  .post-container {
+    padding: 0;
+    margin: 30px 20px 0;
+  }
   .post-title {
     margin-bottom: 30px;
   }
@@ -684,7 +691,7 @@ ul {
     font-size: 16px;
   }
   .post-title .meta-item {
-    font-size: 10px;
+    font-size: 13px;
   }
   .post-container blockquote {
     padding: 4px 15px;
@@ -692,6 +699,63 @@ ul {
   .post-container blockquote p {
     font-size: 15px;
   }
+  .post-inner {
+    padding: 0;
+  }
+  .post-inner p {
+    font-size: 16px;
+  }
+
+  .post-inner h1 {
+    font-size: 22px;
+  }
+
+  .post-inner h2 {
+    font-size: 18px;
+  }
+
+  .post-inner h3 {
+    font-size: 14px;
+  }
+
+  .post-inner h4 {
+    font-size: 10px;
+  }
+
+  .post-inner h5 {
+    font-size: 6px;
+  }
+
+  .post-inner h6 {
+    font-size: 4px;
+  }
+
+  .post-inner a {
+    text-decoration: none;
+    color: #a6abb2;
+    border-bottom: 1px dotted #a6abb2;
+  }
+
+  .post-inner a:hover {
+    border-bottom: 1px solid #c1c7cf;
+  }
+
+  .post-inner img {
+    display: block;
+    max-width: 100%;
+    margin: auto;
+  }
+
+  .post-inner code {
+    font-family: 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    margin: 0;
+  }
+
+  .post-inner pre code {
+    margin: 0;
+  }
+
   /* footer */
   .footer {
     font-size: 12px;
