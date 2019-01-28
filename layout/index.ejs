@@ -1,26 +1,23 @@
 <div class="banner">
-        <div class="banner-nav">
-            <button class="nav-button" id="g-toggle">
-            </button>
-            <div class="nav-list" id="g-navlist">
-                <ul>
-                    <% for (var i in theme.menu){ %>
-                        <li><a href="<%- url_for(theme.menu[i]) %>"><%= i %></a></li>
-                    <% } %>
-                </ul>
-            </div>
-        </div>
-        <div class="banner-content">
-            <h1><%= config.title %></h1>
-            <h2><img src="../images/subtitle.png" alt="descovery" ></h2>
-        </div>
+  <div class="banner-nav">
+    <button class="nav-button" id="g-toggle"></button>
+    <div class="nav-list" id="g-navlist">
+      <ul>
+        <% for (var i in theme.menu){ %>
+        <li><a href="<%- url_for(theme.menu[i]) %>"><%= i %></a></li>
+        <% } %>
+      </ul>
+    </div>
+  </div>
+  <div class="banner-content">
+    <h1><%= config.title %></h1>
+    <h2><img src="../images/subtitle.png" alt="descovery" /></h2>
+  </div>
 </div>
 <div class="wrapper wrapper-index">
-    <main class="main-list">
-        <% page.posts.each(function (post,index) { %>
-            <%- partial('_partial/article.ejs',{index: true, post: post}) %>
-        <% }) %>
-        <%- partial('_partial/paginator') %>
-        <%- partial('_partial/footer.ejs') %>
-    </main>
+  <main class="main-list">
+    <% page.posts.each(function (post,index) { %> <%- partial('_partial/article.ejs',{index: true, post: post}) %> <% })
+    %> <%- partial('_partial/paginator') %>
+  </main>
+  <%- partial('_partial/footer.ejs') %>
 </div>

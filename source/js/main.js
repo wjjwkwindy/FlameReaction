@@ -13,3 +13,8 @@ if (toggleButton && navList) {
     }
   });
 }
+
+// Remove Loading Animation when page is load.
+window.addEventListener('load', function(event) {
+  document.getElementById('loader').style.display = 'none';
+});
