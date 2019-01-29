@@ -1,6 +1,6 @@
 <p align="center">
     <a href="https://github.com/wjjwkwindy/FlameReaction" target="_blank">
-        <img width="690" src="https://i.loli.net/2018/07/31/5b606dc9dce47.png">
+        <img width="690" src="https://i.loli.net/2019/01/29/5c501fae0aa0e.png">
     </a>
 </p>
 
