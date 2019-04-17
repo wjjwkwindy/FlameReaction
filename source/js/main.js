@@ -1,5 +1,5 @@
 var toggleButton = document.getElementById('g-toggle');
-var navList = document.getElementById('g-navlist');
+var navList = document.getElementById('g-nav_list');
 
 hljs.initHighlightingOnLoad();
 

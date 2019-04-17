@@ -1,7 +1,7 @@
 <div class="banner">
   <div class="banner-nav">
     <button class="nav-button" id="g-toggle"></button>
-    <div class="nav-list" id="g-navlist">
+    <div class="nav-list" id="g-nav_list">
       <ul>
         <% for (var i in theme.menu){ %>
         <li><a href="<%- url_for(theme.menu[i]) %>"><%= i %></a></li>
@@ -11,7 +11,7 @@
   </div>
   <div class="banner-content">
     <h1><%= config.title %></h1>
-    <h2><img src="../images/subtitle.png" alt="descovery" /></h2>
+    <h2><img src="../images/subtitle.png" alt="discovery" /></h2>
   </div>
 </div>
 <div class="wrapper wrapper-index">
